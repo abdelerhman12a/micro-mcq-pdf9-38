@@ -63,5 +63,5 @@ function rv(){
  return `<div class="card rv">${q.img?`<img class="fig" style="max-height:200px" src="${IMG[q.img]}">`:''}<b>${k+1}. ${q.stem}</b>
  ${q.opts.map((o,j)=>`<div class="ro ${j===q.key?'ok':''} ${j===a&&!ok?'no':''}">${L[j]}) ${o}${j===a?' (your answer)':''}</div>`).join('')}
  <div class="ex">${ok?'Correct':(a===undefined?'Not answered':'Wrong')}. Answer: ${L[q.key]}<br>${q.exp||''}<div class="src">Book: ${q.src}</div></div></div>`}).join('')}
-home();
+if(location.hash==='#menu')home();else start(Q,'practice');
 </script></body></html>
