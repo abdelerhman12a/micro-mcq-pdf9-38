@@ -27,33 +27,35 @@ const L='abcd';
 function start(list,m){order=shuffle(list);i=0;mode=m;ans={};submitted=false;show()}
 function home(){app.innerHTML=`<div class="card"><h2>Infection and Immunity, PDF 9-38</h2>
 <p>${Q.length} MCQs from the coursebook (Staphylococcus, Streptococcus, Enterococcus, Neisseria, Moraxella). Mixed across all topics in random order. Each question keeps its book image where it has one. Answers follow the coursebook.</p>
-<p><b>Exam mode:</b> pick answers, move freely, skip and come back, then Submit to see the score, answers and explanations.</p>
-<button class="btn" onclick="start(Q,'exam')">Exam: all ${Q.length}</button>
-<button class="btn" onclick="start(shuffle(Q).slice(0,50),'exam')">Exam: 50 random</button>
-<button class="btn" onclick="start(Q.filter(q=>q.img),'exam')">Exam: image questions</button>
-<p><b>Practice mode</b> (instant feedback after each answer):</p>
-<button class="btn g" onclick="start(Q,'practice')">Practice: all</button></div>`}
+<p><b>Practice mode (default):</b> after each answer you see right or wrong, the book answer and the explanation at once. Your score updates as you go. At the end you get the score, a review of the missed questions, and a button to retry only the missed ones.</p>
+<button class="btn" onclick="start(Q,'practice')">Practice: all ${Q.length}</button>
+<button class="btn" onclick="start(shuffle(Q).slice(0,50),'practice')">Practice: 50 random</button>
+<button class="btn" onclick="start(Q.filter(q=>q.img),'practice')">Practice: image questions</button>
+<p><b>Exam mode</b> (optional, answers shown only at the end):</p>
+<button class="btn g" onclick="start(Q,'exam')">Exam: all ${Q.length}</button>
+<button class="btn g" onclick="start(shuffle(Q).slice(0,50),'exam')">Exam: 50 random</button>
+</div>`}
 function nav(){return `<div class="grid">${order.map((q,k)=>`<span class="gi ${k===i?'cur':''} ${ans[k]!==undefined?'done':''}" onclick="go(${k})">${k+1}</span>`).join('')}</div>`}
 function go(k){i=k;show()}
 function show(){
  const q=order[i];const sel=ans[i];const locked=mode==='practice'&&sel!==undefined;
  const n=Object.keys(ans).length;
- app.innerHTML=`<div class="top"><span>Question ${i+1} / ${order.length}</span><span>Answered ${n}</span></div><div class="bar"><i style="width:${n/order.length*100}%"></i></div>
+ app.innerHTML=`<div class="top"><span>Question ${i+1} / ${order.length}</span><span>Answered ${n}${mode==='practice'?` | Correct ${order.reduce((c,q,k)=>c+(ans[k]===q.key?1:0),0)}`:''}</span></div><div class="bar"><i style="width:${n/order.length*100}%"></i></div>
  <div class="card" style="margin-top:10px">${q.img?`<img class="fig" src="${IMG[q.img]}" alt="book figure" onerror="this.outerHTML='<p>(image did not load)</p>'">`:''}
  <div class="stem">${q.stem}</div><div id="opts">${q.opts.map((o,k)=>{let c='o';if(sel===k)c+=' sel';if(locked){if(k===q.key)c+=' ok';else if(sel===k)c+=' no'}return `<button class="${c}" onclick="pick(${k})">${L[k]}) ${o}</button>`}).join('')}</div>
  ${locked?`<div class="ex"><b>${sel===q.key?'Correct':'Wrong'}. Answer: ${L[q.key]}</b><br>${q.exp||''}<div class="src">Book: ${q.src}</div></div>`:''}
- <div style="margin-top:8px"><button class="btn g" ${i==0?'disabled':''} onclick="go(${i}-1)">Previous</button><button class="btn g" ${i>=order.length-1?'disabled':''} onclick="go(${i}+1)">Next</button><button class="btn" onclick="submit()">Submit</button></div></div>
+ <div style="margin-top:8px"><button class="btn g" ${i==0?'disabled':''} onclick="go(${i}-1)">Previous</button><button class="btn g" ${i>=order.length-1?'disabled':''} onclick="go(${i}+1)">Next</button><button class="btn" onclick="submit()">${mode==='practice'?'Finish &amp; score':'Submit'}</button></div></div>
  <div class="card">${nav()}</div>`}
-function pick(k){ if(mode==='practice'&&ans[i]!==undefined)return; ans[i]=k; show()}
+function pick(k){ if(mode==='practice'&&ans[i]!==undefined)return; ans[i]=k; show(); if(mode==='practice'){const x=document.querySelector('.ex');if(x)x.scrollIntoView({block:'nearest',behavior:'smooth'})}}
 function submit(){
  const un=order.length-Object.keys(ans).length;
- if(un>0&&!confirm(un+' unanswered. Submit anyway?'))return;
+ if(un>0&&!confirm(un+' unanswered. Finish anyway? Unanswered count as missed.'))return;
  submitted=true;let sc=0;const wrong=[];
  order.forEach((q,k)=>{if(ans[k]===q.key)sc++;else wrong.push(k)});
  window.__r=wrong;
- app.innerHTML=`<div class="card"><h2>Result: ${sc} / ${order.length}</h2><p>${wrong.length} wrong or unanswered.</p>
- <button class="btn" onclick="start(Q,'exam')">New exam</button><button class="btn g" onclick="start(wrong.map(k=>order[k]),'exam')">Redo wrong</button><button class="btn g" onclick="home()">Home</button></div>
- <div class="card"><label><input type="checkbox" id="wo" onchange="rv()"> show wrong only</label></div><div id="rv"></div>`;
+ app.innerHTML=`<div class="card"><h2>Result: ${sc} / ${order.length}</h2><p>${order.length-wrong.length} correct, ${wrong.length} missed (wrong or unanswered).</p>
+ ${wrong.length?`<button class="btn" onclick="start(wrong.map(k=>order[k]),mode)">Retry missed only (${wrong.length})</button>`:'<p><b>No missed questions.</b></p>'}<button class="btn g" onclick="start(Q,mode)">New round: all</button><button class="btn g" onclick="home()">Home</button></div>
+ <div class="card"><label><input type="checkbox" id="wo" onchange="rv()"> show missed only</label></div><div id="rv"></div>`;
  window.wrong=wrong;window.__o=order.slice();window.__a=Object.assign({},ans);rv()}
 function rv(){
  const wo=document.getElementById('wo').checked;
