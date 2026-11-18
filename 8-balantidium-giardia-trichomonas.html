@@ -27,10 +27,10 @@ const L='ABCD';
 function start(list,m){order=shuffle(list);i=0;mode=m;ans={};submitted=false;show()}
 function home(){app.innerHTML=`<div class="card"><h2>Balantidium, Giardia & Trichomonas</h2>
 <p>${Q.length} MCQs from the theoretical coursebook (printed pages 361-368), with the book figures. Questions follow the 5 professor archetypes. Answers and trigger words appear at the end.</p>
-<p><b>Exam mode (default):</b> answer all questions, answers and explanations come only at the end with your score, a review and "Retry missed only".</p>
+<p><b>Exam mode (optional):</b> answers and explanations come only at the end with your score, a review and "Retry missed only".</p>
 <button class="btn" onclick="start(Q,'exam')">Exam: all ${Q.length}</button>
 <button class="btn" onclick="start(shuffle(Q).slice(0,50),'exam')">Exam: 50 random</button>
-<p><b>Practice mode (optional):</b> instant feedback after each answer.</p>
+<p><b>Practice mode (default):</b> instant feedback and explanation after each answer, then a score and "Retry missed only".</p>
 <button class="btn g" onclick="start(Q,'practice')">Practice: all ${Q.length}</button>
 <button class="btn g" onclick="start(shuffle(Q).slice(0,50),'practice')">Practice: 50 random</button>
 </div>`}
@@ -62,5 +62,5 @@ function rv(){
  return `<div class="card rv">${q.img?`<img class="fig" style="max-height:200px" src="${IMG[q.img]}">`:''}<b>${k+1}. ${q.stem}</b>
  ${q.opts.map((o,j)=>`<div class="ro ${j===q.key?'ok':''} ${j===a&&!ok?'no':''}">${L[j]}) ${o}${j===a?' (your answer)':''}</div>`).join('')}
  <div class="ex">${ok?'Correct':(a===undefined?'Not answered':'Wrong')}. Answer: ${L[q.key]}<br>${q.exp||''}<div class="src">Book: ${q.src}</div></div></div>`}).join('')}
-if(location.hash==='#menu')home();else if(location.hash==='#practice')start(Q,'practice');else start(Q,'exam');
+if(location.hash==='#menu')home();else if(location.hash==='#exam')start(Q,'exam');else start(Q,'practice');
 </script></body></html>
