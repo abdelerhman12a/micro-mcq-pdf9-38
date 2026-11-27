@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Balantidium, Giardia and Trichomonas practical - Practical (para) - Week 3 timetable</title><style>
+:root{--blue:#1d4ed8;--ok:#15803d;--no:#b91c1c}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;margin:0;background:#eef2f7;color:#111}
+.w{max-width:700px;margin:0 auto;padding:12px}
+.card{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 8px #0001,0 1px 3px #0002;margin-bottom:12px}
+.hdr{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;border-radius:14px;padding:16px;margin-bottom:12px}
+.hdr h2{margin:0 0 4px;font-size:20px}
+.hdr .meta{font-size:13px;opacity:.92;line-height:1.5}
+.badge{display:inline-block;background:#ffffff2e;border-radius:999px;padding:2px 10px;font-size:12px;margin:2px 4px 0 0}
+.bar{height:8px;background:#d7dee9;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--blue);width:0;transition:width .2s}
+.stem{font-size:18px;line-height:1.45;margin:4px 0 12px;font-weight:600}
+img.fig{max-width:100%;max-height:360px;display:block;margin:0 auto 12px;border-radius:8px;border:1px solid #e2e8f0}
+button.o{display:block;width:100%;text-align:left;font-size:16px;line-height:1.4;padding:13px 14px;margin:8px 0;border:2px solid #d4dbe6;border-radius:12px;background:#fff;cursor:pointer}
+button.o:active{transform:scale(.99)}
+button.o.ok{border-color:var(--ok);background:#dcfce7}
+button.o.no{border-color:var(--no);background:#fee2e2}
+.btn{font-size:16px;padding:12px 18px;border:0;border-radius:12px;background:var(--blue);color:#fff;margin:4px 6px 4px 0;cursor:pointer}
+.btn.g{background:#64748b}
+.btn.o{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn[disabled]{opacity:.4}
+.ex{background:#eff6ff;border-left:4px solid var(--blue);border-radius:8px;padding:12px;margin-top:12px;font-size:15px;line-height:1.5}
+.ex .cue{margin-top:8px;background:#fefce8;border:1px solid #fde68a;border-radius:8px;padding:8px;font-size:14px}
+.src{font-size:12px;color:#555;margin-top:8px}
+.top{display:flex;justify-content:space-between;font-size:14px;margin:6px 2px;color:#334155}
+.grid{display:flex;flex-wrap:wrap;gap:6px}
+.gi{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#e2e8f0;font-size:13px;cursor:pointer}
+.gi.done{background:#93c5fd;color:#0f172a}
+.gi.cur{outline:2px solid #0f172a}
+.rv{font-size:14px}
+.ro{padding:8px 10px;margin:4px 0;border-radius:8px;border:1px solid #e5e7eb}
+.ro.ok{background:#dcfce7;border-color:var(--ok)}
+.ro.no{background:#fee2e2;border-color:var(--no)}
+table.cues{border-collapse:collapse;width:100%;font-size:14px;background:#fff}
+.cues th{background:#1e3a8a;color:#fff;text-align:left;padding:9px 10px;position:sticky;top:0;font-size:13px}
+.cues td{padding:9px 10px;border-top:1px solid #e5e7eb;vertical-align:top;line-height:1.45}
+.cues td:first-child{font-weight:700;background:#fefce8}
+.cues td.ans{background:#f0fdf4}
+@media(max-width:640px){
+ .cues thead{display:none}
+ .cues table,.cues tbody,.cues tr,.cues td{display:block;width:100%;box-sizing:border-box}
+ .cues tr{border:1px solid #dbe3ee;border-radius:12px;margin:10px 0;box-shadow:0 1px 3px #0001;overflow:hidden}
+ .cues td{border-top:0;padding:7px 12px}
+ .cues td:before{content:attr(data-l);display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
+}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:10px;font-size:14px;margin:10px 0}
+a.lnk{color:var(--blue)}
+</style></head><body><div class="w" id="app"></div><script>
+const IMG={};
+const BANK={"title": "Balantidium, Giardia and Trichomonas practical - Practical (para)", "sourceLabel": "Practical 85-87", "dateLabel": "Wednesday 18 Nov, 10:40 (Para practical)", "indexUrl": "week3-infection-immunity.html", "indexLabel": "Back to Week 3 timetable", "extraLinks": ""};
+const Q=[{"n": 1, "stem": "Balantidium coli trophozoite is", "opts": ["Smallest", "Largest protozoan parasite of man, 50-200 x 40-60 micron, ciliated", "Amoeboid", "Flagellate"], "key": 1, "exp": "Trigger: \"The largest protozoal parasite of man, varying in size from 50-200 * 40-60 um\".", "src": "Practical book PDF 85 (printed 78)", "cue": "size", "ask": "Balantidium coli trophozoite is", "distinguish": "Ciliate."}, {"n": 2, "stem": "Balantidium covering", "opts": ["Flagella", "Pseudopodia", "Spikes", "Short cilia in longitudinal rows"], "key": 3, "exp": "Trigger: \"covered with short cilia arranged in longitudinal rows\".", "src": "Practical book PDF 85 (printed 78)", "cue": "cilia", "ask": "Balantidium covering", "distinguish": "Oval."}, {"n": 3, "stem": "Balantidium cytostome", "opts": ["Funnel-shaped at pointed anterior end", "Posterior", "Sucker", "Absent"], "key": 0, "exp": "Trigger: \"Anterior end slightly pointed, and has a funnel shaped (cytostome)\".", "src": "Practical book PDF 85 (printed 78)", "cue": "cytostome", "ask": "Balantidium cytostome", "distinguish": "Anterior."}, {"n": 4, "stem": "Balantidium nuclei", "opts": ["Four", "Kidney-shaped macronucleus with spherical micronucleus in a depression", "One nucleus", "Karyosome only"], "key": 1, "exp": "Trigger: \"kidney shaped macro-nucleus, and a spherical micro-nucleus, this lies in a depression of the macro-nucleus\".", "src": "Practical book PDF 85 (printed 78)", "cue": "nuclei", "ask": "Balantidium nuclei", "distinguish": "2 nuclei."}, {"n": 5, "stem": "Balantidium contractile vacuoles", "opts": ["None", "Two, middle and near posterior end", "One", "Four"], "key": 1, "exp": "Trigger: \"2 contractile vacuoles, one in the middle and the other near the posterior end\".", "src": "Practical book PDF 85 (printed 78)", "cue": "vacuoles", "ask": "Balantidium contractile vacuoles", "distinguish": "Trophozoite."}, {"n": 6, "stem": "Balantidium cyst", "opts": ["10 micron", "Uninucleate", "Spherical about 55 micron, ciliated, 2 nuclei, thick wall", "Thin"], "key": 2, "exp": "Trigger: \"more spherical, with average diameter of 55 um... covered with cilia, has two nuclei, and thick wall\".", "src": "Practical book PDF 85 (printed 78)", "cue": "cyst", "ask": "Balantidium cyst", "distinguish": "Large."}, {"n": 7, "stem": "Giardia trophozoite shape", "opts": ["Spiral", "Round 50 micron", "Monkey face, pear-shaped, 10-20 micron", "Oval ciliated"], "key": 2, "exp": "Trigger: \"shape of a monkey's face. Size about 10-20 um long. Pear-shaped\".", "src": "Practical book PDF 86 (printed 79)", "cue": "shape", "ask": "Giardia trophozoite shape", "distinguish": "Ventral disk."}, {"n": 8, "stem": "Giardia has", "opts": ["Cilia", "No disk", "Dorsal disk", "Ventral bilobed sucking disk anteriorly"], "key": 3, "exp": "Trigger: \"ventral bilobed sucking disk. It is anterior in position\".", "src": "Practical book PDF 86 (printed 79)", "cue": "disk", "ask": "Giardia has", "distinguish": "Attaches to mucosa."}, {"n": 9, "stem": "Giardia nuclei and flagella", "opts": ["2 oval nuclei with central karyosome, 4 pairs of flagella", "8 nuclei", "2 flagella", "1 nucleus, 4 flagella"], "key": 0, "exp": "Trigger: \"2 oval nuclei... 4 pairs of flagella\".", "src": "Practical book PDF 86 (printed 79)", "cue": "nuclei flagella", "ask": "Giardia nuclei and flagella", "distinguish": "Axostyles 2."}, {"n": 10, "stem": "Giardia median bodies", "opts": ["Karyosome", "Pair of dark sausage-shaped bodies across the middle, axostyles as rods", "None", "Cilia"], "key": 1, "exp": "Trigger: \"a pair of dark sausage-shaped bodies... two elongated rod-like structures called the axostyles\".", "src": "Practical book PDF 86 (printed 79)", "cue": "median", "ask": "Giardia median bodies", "distinguish": "Trophozoite."}, {"n": 11, "stem": "Giardia cyst", "opts": ["8 nuclei", "2 nuclei", "10-14 micron oval thick-walled, 4 nuclei at one pole, axostyles and fibrils", "Round 55"], "key": 2, "exp": "Trigger: \"Size about 10-14 um... Oval... 4 rounded nuclei, usually grouped at one pole\".", "src": "Practical book PDF 86 (printed 79)", "cue": "cyst", "ask": "Giardia cyst", "distinguish": "Infective."}, {"n": 12, "stem": "Trichomonas vaginalis stages", "opts": ["None", "Trophozoite only, no cyst", "Both", "Cyst only"], "key": 1, "exp": "Trigger: \"Have only trophozoite stage. No cyst stages\".", "src": "Practical book PDF 87 (printed 80)", "cue": "stage", "ask": "Trichomonas vaginalis stages", "distinguish": "STD."}, {"n": 13, "stem": "Trichomonas trophozoite size", "opts": ["8-23 x 5-12 micron", "100 micron", "1 micron", "50 micron"], "key": 0, "exp": "Trigger: \"8-23 µm in length, 5-12 µm in width\".", "src": "Practical book PDF 87 (printed 80)", "cue": "size", "ask": "Trichomonas trophozoite size", "distinguish": "Single nucleus."}, {"n": 14, "stem": "Trichomonas flagella and membrane", "opts": ["Cilia", "None", "8 flagella", "4 anterior flagella and undulating membrane with axostyle"], "key": 3, "exp": "Trigger: \"4 flagella (originate from the anterior end). undulating membrane usually with visible axostyle\".", "src": "Practical book PDF 87 (printed 80)", "cue": "structures", "ask": "Trichomonas flagella and membrane", "distinguish": "One nucleus."}, {"n": 15, "stem": "Trichomonas motility in wet preparation", "opts": ["Non-motile", "Slow gliding", "Rapid jerky motion", "Spiral"], "key": 2, "exp": "Trigger: \"In wet preparations exhibit a rapid, jerky motion\".", "src": "Practical book PDF 87 (printed 80)", "cue": "motility", "ask": "Trichomonas motility in wet preparation", "distinguish": "Wet mount."}, {"n": 16, "stem": "Trichomonas nucleus", "opts": ["Single nucleus", "2 nuclei", "4 nuclei", "None"], "key": 0, "exp": "Trigger: \"single nucleus\".", "src": "Practical book PDF 87 (printed 80)", "cue": "nucleus", "ask": "Trichomonas nucleus", "distinguish": "Giardia has 2."}];
+const app=document.getElementById('app');
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+let order=[],i=0,mode='practice',ans={};
+const L='ABCD';
+function start(list,m){order=shuffle(list);i=0;mode=m||'practice';ans={};show();window.scrollTo(0,0)}
+function home(){location.hash='#menu';app.innerHTML=`<div class="hdr"><h2>${BANK.title}</h2><div class="meta">${BANK.dateLabel}<br>Source: ${BANK.sourceLabel}</div><span class="badge">${Q.length} questions</span>${Object.keys(IMG).length?`<span class="badge">${Object.keys(IMG).length} figures</span>`:''}</div>
+<div class="card">
+<p>Tap an answer and know immediately if it is right, with the trigger words and the book page. Questions and options are shuffled every round.</p>
+<button class="btn" onclick="start(Q,'practice')">Practice: all ${Q.length}</button>
+<button class="btn o" onclick="start(shuffle(Q).slice(0,Math.min(40,Q.length)),'practice')">Practice: 40 random</button>
+<button class="btn g" onclick="start(Q,'exam')">Exam mode (answers at the end)</button>
+<button class="btn g" onclick="guide()">Review table (جدول المراجعة)</button>
+${BANK.extraLinks||''}
+<p style="margin-top:10px"><a class="lnk" href="${BANK.indexUrl}">${BANK.indexLabel}</a></p>
+</div>`}
+function guide(){
+ location.hash='#review';
+ const rows=Q.map((q,k)=>`<tr><td data-l="Cue (from the book)">${q.cue||''}</td><td data-l="The question asks">${q.ask||q.stem}</td><td data-l="Answer" class="ans">${q.opts[q.key]}</td><td data-l="Distinguish from">${q.distinguish||''}</td></tr>`).join('');
+ app.innerHTML=`<div class="card"><h2 style="margin-top:0">Review table - ${BANK.title}</h2>
+ <div class="note"><b>How to use:</b> when you see the <b>cue</b> in a question, this table tells you what the question really asks, the answer, and what separates it from the close options. Cues come only from the book pages of this session. A cue is a strong hint, not a guarantee: read the whole stem.</div>
+ <button class="btn" onclick="start(Q,'practice')">Start practice</button><button class="btn g" onclick="home()">Menu</button>
+ <div style="overflow-x:auto;margin-top:10px"><table class="cues"><thead><tr><th>Cue (from the book)</th><th>The question asks</th><th>Answer</th><th>Distinguish from</th></tr></thead><tbody>${rows}</tbody></table></div>
+ <p style="margin-top:10px"><a class="lnk" href="${BANK.indexUrl}">${BANK.indexLabel}</a></p></div>`;
+ window.scrollTo(0,0)}
+function nav(){return `<div class="grid">${order.map((q,k)=>`<span class="gi ${k===i?'cur':''} ${ans[k]!==undefined?'done':''}" onclick="go(${k})">${k+1}</span>`).join('')}</div>`}
+function go(k){i=k;show()}
+function show(){
+ const q=order[i];const sel=ans[i];const locked=mode==='practice'&&sel!==undefined;
+ const n=Object.keys(ans).length;
+ app.innerHTML=`<div class="top"><span>${mode==='practice'?'PRACTICE':'EXAM'} | Question ${i+1} / ${order.length}</span><span>Answered ${n}${mode==='practice'?` | Correct ${order.reduce((c,q,k)=>c+(ans[k]===q.key?1:0),0)}`:''}</span></div><div class="bar"><i style="width:${n/order.length*100}%"></i></div>
+ <div class="card" style="margin-top:10px">${q.img?`<img class="fig" src="${IMG[q.img]}" alt="book figure" onerror="this.outerHTML='<p>(image did not load)</p>'">`:''}
+ <div class="stem">${q.stem}</div><div id="opts">${q.opts.map((o,k)=>{let c='o';if(locked){if(k===q.key)c+=' ok';else if(sel===k)c+=' no'}return `<button class="${c}" onclick="pick(${k})">${L[k]}) ${o}</button>`}).join('')}</div>
+ ${locked?`<div class="ex"><b>${sel===q.key?'Correct':'Wrong'}. Answer: ${L[q.key]}) ${q.opts[q.key]}</b><br>${q.exp||''}${q.cue?`<div class="cue"><b>Cue:</b> ${q.cue}${q.distinguish?`<br><b>Distinguish:</b> ${q.distinguish}`:''}</div>`:''}<div class="src">Book: ${q.src}</div></div>`:''}
+ <div style="margin-top:10px"><button class="btn g" ${i==0?'disabled':''} onclick="go(${i}-1)">Previous</button><button class="btn g" ${i>=order.length-1?'disabled':''} onclick="go(${i}+1)">Next</button><button class="btn" onclick="submit()">${mode==='practice'?'Finish & score':'Submit & see answers'}</button><button class="btn g" onclick="home()">Menu</button></div></div>
+ <div class="card">${nav()}</div>`}
+function pick(k){ if(mode==='practice'&&ans[i]!==undefined)return; ans[i]=k; show(); if(mode==='practice'){const x=document.querySelector('.ex');if(x)x.scrollIntoView({block:'nearest',behavior:'smooth'})}}
+function submit(){
+ const un=order.length-Object.keys(ans).length;
+ if(un>0&&!confirm(un+' unanswered. Finish anyway? Unanswered count as missed.'))return;
+ let sc=0;const wrong=[];
+ order.forEach((q,k)=>{if(ans[k]===q.key)sc++;else wrong.push(k)});
+ app.innerHTML=`<div class="card"><h2>Result: ${sc} / ${order.length}</h2><p>${sc} correct, ${wrong.length} missed (wrong or unanswered).</p>
+ ${wrong.length?`<button class="btn" onclick="start(wrong.map(k=>order[k]),mode)">Retry missed only (${wrong.length})</button>`:'<p><b>No missed questions.</b></p>'}<button class="btn g" onclick="start(Q,mode)">New round: all</button><button class="btn g" onclick="home()">Menu</button><button class="btn g" onclick="guide()">Review table</button></div>
+ <div class="card"><label><input type="checkbox" id="wo" onchange="rv()"> show missed only</label></div><div id="rv"></div>`;
+ window.wrong=wrong;window.__o=order.slice();window.__a=Object.assign({},ans);rv();window.scrollTo(0,0)}
+function rv(){
+ const wo=document.getElementById('wo').checked;
+ document.getElementById('rv').innerHTML=window.__o.map((q,k)=>{const a=window.__a[k];const ok=a===q.key;if(wo&&ok)return '';
+ return `<div class="card rv">${q.img?`<img class="fig" style="max-height:200px" src="${IMG[q.img]}">`:''}<b>${k+1}. ${q.stem}</b>
+ ${q.opts.map((o,j)=>`<div class="ro ${j===q.key?'ok':''} ${j===a&&!ok?'no':''}">${L[j]}) ${o}${j===a?' (your answer)':''}</div>`).join('')}
+ <div class="ex">${ok?'Correct':(a===undefined?'Not answered':'Wrong')}. Answer: ${L[q.key]}) ${q.opts[q.key]}<br>${q.exp||''}<div class="src">Book: ${q.src}</div></div></div>`}).join('')}
+if(location.hash==='#menu')home();else if(location.hash==='#exam')start(Q,'exam');else if(location.hash==='#review')guide();else start(Q,'practice');
+</script></body></html>

@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Amoebae practical: E. histolytica and E. coli - Practical (para) - Week 3 timetable</title><style>
+:root{--blue:#1d4ed8;--ok:#15803d;--no:#b91c1c}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;margin:0;background:#eef2f7;color:#111}
+.w{max-width:700px;margin:0 auto;padding:12px}
+.card{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 8px #0001,0 1px 3px #0002;margin-bottom:12px}
+.hdr{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;border-radius:14px;padding:16px;margin-bottom:12px}
+.hdr h2{margin:0 0 4px;font-size:20px}
+.hdr .meta{font-size:13px;opacity:.92;line-height:1.5}
+.badge{display:inline-block;background:#ffffff2e;border-radius:999px;padding:2px 10px;font-size:12px;margin:2px 4px 0 0}
+.bar{height:8px;background:#d7dee9;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--blue);width:0;transition:width .2s}
+.stem{font-size:18px;line-height:1.45;margin:4px 0 12px;font-weight:600}
+img.fig{max-width:100%;max-height:360px;display:block;margin:0 auto 12px;border-radius:8px;border:1px solid #e2e8f0}
+button.o{display:block;width:100%;text-align:left;font-size:16px;line-height:1.4;padding:13px 14px;margin:8px 0;border:2px solid #d4dbe6;border-radius:12px;background:#fff;cursor:pointer}
+button.o:active{transform:scale(.99)}
+button.o.ok{border-color:var(--ok);background:#dcfce7}
+button.o.no{border-color:var(--no);background:#fee2e2}
+.btn{font-size:16px;padding:12px 18px;border:0;border-radius:12px;background:var(--blue);color:#fff;margin:4px 6px 4px 0;cursor:pointer}
+.btn.g{background:#64748b}
+.btn.o{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn[disabled]{opacity:.4}
+.ex{background:#eff6ff;border-left:4px solid var(--blue);border-radius:8px;padding:12px;margin-top:12px;font-size:15px;line-height:1.5}
+.ex .cue{margin-top:8px;background:#fefce8;border:1px solid #fde68a;border-radius:8px;padding:8px;font-size:14px}
+.src{font-size:12px;color:#555;margin-top:8px}
+.top{display:flex;justify-content:space-between;font-size:14px;margin:6px 2px;color:#334155}
+.grid{display:flex;flex-wrap:wrap;gap:6px}
+.gi{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#e2e8f0;font-size:13px;cursor:pointer}
+.gi.done{background:#93c5fd;color:#0f172a}
+.gi.cur{outline:2px solid #0f172a}
+.rv{font-size:14px}
+.ro{padding:8px 10px;margin:4px 0;border-radius:8px;border:1px solid #e5e7eb}
+.ro.ok{background:#dcfce7;border-color:var(--ok)}
+.ro.no{background:#fee2e2;border-color:var(--no)}
+table.cues{border-collapse:collapse;width:100%;font-size:14px;background:#fff}
+.cues th{background:#1e3a8a;color:#fff;text-align:left;padding:9px 10px;position:sticky;top:0;font-size:13px}
+.cues td{padding:9px 10px;border-top:1px solid #e5e7eb;vertical-align:top;line-height:1.45}
+.cues td:first-child{font-weight:700;background:#fefce8}
+.cues td.ans{background:#f0fdf4}
+@media(max-width:640px){
+ .cues thead{display:none}
+ .cues table,.cues tbody,.cues tr,.cues td{display:block;width:100%;box-sizing:border-box}
+ .cues tr{border:1px solid #dbe3ee;border-radius:12px;margin:10px 0;box-shadow:0 1px 3px #0001;overflow:hidden}
+ .cues td{border-top:0;padding:7px 12px}
+ .cues td:before{content:attr(data-l);display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
+}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:10px;font-size:14px;margin:10px 0}
+a.lnk{color:var(--blue)}
+</style></head><body><div class="w" id="app"></div><script>
+const IMG={};
+const BANK={"title": "Amoebae practical: E. histolytica and E. coli - Practical (para)", "sourceLabel": "Practical 82-84 + T 357-362", "dateLabel": "Wednesday 18 Nov, 9:00 (Para practical)", "indexUrl": "week3-infection-immunity.html", "indexLabel": "Back to Week 3 timetable", "extraLinks": ""};
+const Q=[{"n": 1, "stem": "E. histolytica/dispar trophozoite size", "opts": ["About 20 micron", "30 micron", "50 micron", "15 micron"], "key": 0, "exp": "Trigger: \"Trophozoite: Size about 20 um\".", "src": "Practical book PDF 83 (printed 76)", "cue": "Eh size", "ask": "E. histolytica/dispar trophozoite size", "distinguish": "E. coli larger."}, {"n": 2, "stem": "E. histolytica nucleus", "opts": ["Coarse granules", "No nucleus", "Central karyosome, fine regular peripheral chromatin granules", "Eccentric karyosome"], "key": 2, "exp": "Trigger: \"Karyosome is central... chromatin granules... fine and regularly arranged\".", "src": "Practical book PDF 83 (printed 76)", "cue": "Eh nucleus", "ask": "E. histolytica nucleus", "distinguish": "Thin membrane."}, {"n": 3, "stem": "RBCs inside the trophozoite indicate", "opts": ["Cyst", "E. coli", "It is a tissue (invasive) form of E. histolytica", "Commensal"], "key": 2, "exp": "Trigger: \"RBCs in different stages of digestion. (The presence of RBCs indicates that it is a tissue form)\".", "src": "Practical book PDF 83 (printed 76)", "cue": "RBCs", "ask": "RBCs inside the trophozoite indicate", "distinguish": "E. coli has bacteria."}, {"n": 4, "stem": "E. histolytica mature cyst", "opts": ["2 nuclei", "Spherical, about 15 micron with 4 nuclei", "20 micron 8 nuclei", "Oval 10 micron"], "key": 1, "exp": "Trigger: \"Spherical, about 15 um in diameter. With 4 small nuclei (quadrinucleate)\".", "src": "Practical book PDF 83 (printed 76)", "cue": "Eh cyst", "ask": "E. histolytica mature cyst", "distinguish": "Infective."}, {"n": 5, "stem": "Chromatoid bodies of E. histolytica", "opts": ["Round", "Absent always", "Cigar-shaped rods with rounded ends", "Splinter with sharp ends"], "key": 2, "exp": "Trigger: \"rod-like with rounded ends (cigar-shaped and dark)\".", "src": "Practical book PDF 83 (printed 76)", "cue": "chromatoid", "ask": "Chromatoid bodies of E. histolytica", "distinguish": "May be lacking in old cysts."}, {"n": 6, "stem": "E. coli trophozoite size and karyosome", "opts": ["15 micron", "20 micron central", "About 30 micron, eccentric karyosome", "50 micron"], "key": 2, "exp": "Trigger: \"slightly larger, about 30 um... Karyosome eccentric\".", "src": "Practical book PDF 84 (printed 77)", "cue": "Ec trophozoite", "ask": "E. coli trophozoite size and karyosome", "distinguish": "Coarse irregular chromatin."}, {"n": 7, "stem": "E. coli nuclear membrane and chromatin", "opts": ["Regular fine", "Thick membrane, coarse irregular chromatin", "Thin, fine", "Absent"], "key": 1, "exp": "Trigger: \"Nuclear membrane is comparatively thick. Chromatin granules are coarse and irregularly distributed\".", "src": "Practical book PDF 84 (printed 77)", "cue": "Ec nucleus", "ask": "E. coli nuclear membrane and chromatin", "distinguish": "Opposite to histolytica."}, {"n": 8, "stem": "E. coli endoplasm contains", "opts": ["No inclusions", "Bacteria/food granules but no RBCs", "Crystals", "RBCs"], "key": 1, "exp": "Trigger: \"Endoplasm with food granules containing bacteria but not RBCs\".", "src": "Practical book PDF 84 (printed 77)", "cue": "Ec endoplasm", "ask": "E. coli endoplasm contains", "distinguish": "Ecto/endo not sharply separate."}, {"n": 9, "stem": "E. coli mature cyst", "opts": ["1 nucleus", "15 micron 4 nuclei", "About 20 micron with 8 nuclei at different levels", "2 nuclei"], "key": 2, "exp": "Trigger: \"Spherical about 20 um... 8-nucleated... nuclei are arranged at different levels\".", "src": "Practical book PDF 84 (printed 77)", "cue": "Ec cyst", "ask": "E. coli mature cyst", "distinguish": "Focus changes."}, {"n": 10, "stem": "Chromatoid bodies of E. coli", "opts": ["Common", "Uncommon, splinter-like with sharp ends", "Cigar rods", "Round"], "key": 1, "exp": "Trigger: \"if present they are needle-like and with sharp ends (splinter-like)\".", "src": "Practical book PDF 84 (printed 77)", "cue": "Ec chromatoid", "ask": "Chromatoid bodies of E. coli", "distinguish": "Histolytica cigar."}, {"n": 11, "stem": "Protozoa size range", "opts": ["1 m", "0.01 micron", "1-150 micron", "10 mm"], "key": 2, "exp": "Trigger: \"wide range of sizes (1-150µ)\".", "src": "Practical book PDF 82 (printed 75)", "cue": "size", "ask": "Protozoa size range", "distinguish": "Unicellular."}, {"n": 12, "stem": "Ectoplasm functions", "opts": ["Nutrition and reproduction", "Genetic", "Digestion only", "Locomotion, ingestion, excretion, protection"], "key": 3, "exp": "Trigger: \"outer hyaline layer responsible for ingestion of food, excretion, respiration, protection, and sensation\".", "src": "Practical book PDF 82 (printed 75)", "cue": "ectoplasm", "ask": "Ectoplasm functions", "distinguish": "Endoplasm nutrition."}, {"n": 13, "stem": "Endoplasm is responsible for", "opts": ["Nutrition and reproduction", "Sensation", "Protection", "Locomotion"], "key": 0, "exp": "Trigger: \"inner granular part... responsible for nutrition and reproduction\".", "src": "Practical book PDF 82 (printed 75)", "cue": "endoplasm", "ask": "Endoplasm is responsible for", "distinguish": "Vacuoles, chromatoid."}, {"n": 14, "stem": "Karyosome is", "opts": ["Flagellum", "Vacuole", "Cell wall", "DNA-containing body central or peripheral in the nucleus"], "key": 3, "exp": "Trigger: \"Karyosome (nucleolus) is a DNA-containing body\".", "src": "Practical book PDF 82 (printed 75)", "cue": "karyosome", "ask": "Karyosome is", "distinguish": "Nucleus."}, {"n": 15, "stem": "E. histolytica infective stage", "opts": ["Egg", "Quadrinucleated cyst", "Trophozoite", "Pseudocyst"], "key": 1, "exp": "Trigger: \"Infective stage: The quadri-nucleated cyst\".", "src": "Theory book PDF 357 (printed 349)", "cue": "infective", "ask": "E. histolytica infective stage", "distinguish": "Swallowed."}, {"n": 16, "stem": "E. histolytica reservoir", "opts": ["None, man only host", "Dog", "Pig", "Cattle"], "key": 0, "exp": "Trigger: \"Man is the only host... no animal reservoirs\".", "src": "Theory book PDF 357 (printed 349)", "cue": "reservoir", "ask": "E. histolytica reservoir", "distinguish": "Food, water."}, {"n": 17, "stem": "Flask-shaped ulcer is typical of", "opts": ["Bacillary dysentery", "Cholera", "Amoebic dysentery (wide base, undermined edge)", "Typhoid"], "key": 2, "exp": "Trigger: \"classic flask-shaped ulcer with a wide base and undermined edge\".", "src": "Theory book PDF 358 (printed 350)", "cue": "ulcer", "ask": "Flask-shaped ulcer is typical of", "distinguish": "Serpiginous in Shigella."}, {"n": 18, "stem": "Amoeboma is", "opts": ["Liver abscess", "Ulcer", "Painful abdominal mass in caecum/descending colon that mimics tumor", "Cyst"], "key": 2, "exp": "Trigger: \"Painful abdominal mass which frequently occurs in caecum and descending colon which may be mistaken as tumor\".", "src": "Theory book PDF 359 (printed 351)", "cue": "amoeboma", "ask": "Amoeboma is", "distinguish": "Complication."}, {"n": 19, "stem": "Amoebic liver abscess content", "opts": ["Chocolate-colored necrotic material", "Clear", "Milky", "Green pus"], "key": 0, "exp": "Trigger: \"center of the abscess is formed of chocolate-colored necrotic tissues\".", "src": "Theory book PDF 359 (printed 351)", "cue": "abscess", "ask": "Amoebic liver abscess content", "distinguish": "Single large."}, {"n": 20, "stem": "Luminal vs tissue drugs", "opts": ["Both metronidazole", "Luminal: iodoquinol, diloxanide, paromomycin; tissue: metronidazole, tinidazole", "Luminal metronidazole", "Only surgery"], "key": 1, "exp": "Trigger: \"luminal drugs... iodoquinol, diloxanide furoate, or paromomycin... tissue drugs... metronidazole... tinidazole\".", "src": "Theory book PDF 361 (printed 353)", "cue": "treatment", "ask": "Luminal vs tissue drugs", "distinguish": "Cyst passers luminal."}, {"n": 21, "stem": "Naegleria fowleri is", "opts": ["Brain-eating free-living amoeba in warm fresh water", "Cyst of E. coli", "Virus", "Intestinal parasite"], "key": 0, "exp": "Trigger: \"Naegleria fowleri (Brain eating amoeba)... free living in fresh water, soil, heated swimming pools\".", "src": "Theory book PDF 362 (printed 354)", "cue": "Naegleria", "ask": "Naegleria fowleri is", "distinguish": "Trophozoite with flagellate form."}];
+const app=document.getElementById('app');
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+let order=[],i=0,mode='practice',ans={};
+const L='ABCD';
+function start(list,m){order=shuffle(list);i=0;mode=m||'practice';ans={};show();window.scrollTo(0,0)}
+function home(){location.hash='#menu';app.innerHTML=`<div class="hdr"><h2>${BANK.title}</h2><div class="meta">${BANK.dateLabel}<br>Source: ${BANK.sourceLabel}</div><span class="badge">${Q.length} questions</span>${Object.keys(IMG).length?`<span class="badge">${Object.keys(IMG).length} figures</span>`:''}</div>
+<div class="card">
+<p>Tap an answer and know immediately if it is right, with the trigger words and the book page. Questions and options are shuffled every round.</p>
+<button class="btn" onclick="start(Q,'practice')">Practice: all ${Q.length}</button>
+<button class="btn o" onclick="start(shuffle(Q).slice(0,Math.min(40,Q.length)),'practice')">Practice: 40 random</button>
+<button class="btn g" onclick="start(Q,'exam')">Exam mode (answers at the end)</button>
+<button class="btn g" onclick="guide()">Review table (جدول المراجعة)</button>
+${BANK.extraLinks||''}
+<p style="margin-top:10px"><a class="lnk" href="${BANK.indexUrl}">${BANK.indexLabel}</a></p>
+</div>`}
+function guide(){
+ location.hash='#review';
+ const rows=Q.map((q,k)=>`<tr><td data-l="Cue (from the book)">${q.cue||''}</td><td data-l="The question asks">${q.ask||q.stem}</td><td data-l="Answer" class="ans">${q.opts[q.key]}</td><td data-l="Distinguish from">${q.distinguish||''}</td></tr>`).join('');
+ app.innerHTML=`<div class="card"><h2 style="margin-top:0">Review table - ${BANK.title}</h2>
+ <div class="note"><b>How to use:</b> when you see the <b>cue</b> in a question, this table tells you what the question really asks, the answer, and what separates it from the close options. Cues come only from the book pages of this session. A cue is a strong hint, not a guarantee: read the whole stem.</div>
+ <button class="btn" onclick="start(Q,'practice')">Start practice</button><button class="btn g" onclick="home()">Menu</button>
+ <div style="overflow-x:auto;margin-top:10px"><table class="cues"><thead><tr><th>Cue (from the book)</th><th>The question asks</th><th>Answer</th><th>Distinguish from</th></tr></thead><tbody>${rows}</tbody></table></div>
+ <p style="margin-top:10px"><a class="lnk" href="${BANK.indexUrl}">${BANK.indexLabel}</a></p></div>`;
+ window.scrollTo(0,0)}
+function nav(){return `<div class="grid">${order.map((q,k)=>`<span class="gi ${k===i?'cur':''} ${ans[k]!==undefined?'done':''}" onclick="go(${k})">${k+1}</span>`).join('')}</div>`}
+function go(k){i=k;show()}
+function show(){
+ const q=order[i];const sel=ans[i];const locked=mode==='practice'&&sel!==undefined;
+ const n=Object.keys(ans).length;
+ app.innerHTML=`<div class="top"><span>${mode==='practice'?'PRACTICE':'EXAM'} | Question ${i+1} / ${order.length}</span><span>Answered ${n}${mode==='practice'?` | Correct ${order.reduce((c,q,k)=>c+(ans[k]===q.key?1:0),0)}`:''}</span></div><div class="bar"><i style="width:${n/order.length*100}%"></i></div>
+ <div class="card" style="margin-top:10px">${q.img?`<img class="fig" src="${IMG[q.img]}" alt="book figure" onerror="this.outerHTML='<p>(image did not load)</p>'">`:''}
+ <div class="stem">${q.stem}</div><div id="opts">${q.opts.map((o,k)=>{let c='o';if(locked){if(k===q.key)c+=' ok';else if(sel===k)c+=' no'}return `<button class="${c}" onclick="pick(${k})">${L[k]}) ${o}</button>`}).join('')}</div>
+ ${locked?`<div class="ex"><b>${sel===q.key?'Correct':'Wrong'}. Answer: ${L[q.key]}) ${q.opts[q.key]}</b><br>${q.exp||''}${q.cue?`<div class="cue"><b>Cue:</b> ${q.cue}${q.distinguish?`<br><b>Distinguish:</b> ${q.distinguish}`:''}</div>`:''}<div class="src">Book: ${q.src}</div></div>`:''}
+ <div style="margin-top:10px"><button class="btn g" ${i==0?'disabled':''} onclick="go(${i}-1)">Previous</button><button class="btn g" ${i>=order.length-1?'disabled':''} onclick="go(${i}+1)">Next</button><button class="btn" onclick="submit()">${mode==='practice'?'Finish & score':'Submit & see answers'}</button><button class="btn g" onclick="home()">Menu</button></div></div>
+ <div class="card">${nav()}</div>`}
+function pick(k){ if(mode==='practice'&&ans[i]!==undefined)return; ans[i]=k; show(); if(mode==='practice'){const x=document.querySelector('.ex');if(x)x.scrollIntoView({block:'nearest',behavior:'smooth'})}}
+function submit(){
+ const un=order.length-Object.keys(ans).length;
+ if(un>0&&!confirm(un+' unanswered. Finish anyway? Unanswered count as missed.'))return;
+ let sc=0;const wrong=[];
+ order.forEach((q,k)=>{if(ans[k]===q.key)sc++;else wrong.push(k)});
+ app.innerHTML=`<div class="card"><h2>Result: ${sc} / ${order.length}</h2><p>${sc} correct, ${wrong.length} missed (wrong or unanswered).</p>
+ ${wrong.length?`<button class="btn" onclick="start(wrong.map(k=>order[k]),mode)">Retry missed only (${wrong.length})</button>`:'<p><b>No missed questions.</b></p>'}<button class="btn g" onclick="start(Q,mode)">New round: all</button><button class="btn g" onclick="home()">Menu</button><button class="btn g" onclick="guide()">Review table</button></div>
+ <div class="card"><label><input type="checkbox" id="wo" onchange="rv()"> show missed only</label></div><div id="rv"></div>`;
+ window.wrong=wrong;window.__o=order.slice();window.__a=Object.assign({},ans);rv();window.scrollTo(0,0)}
+function rv(){
+ const wo=document.getElementById('wo').checked;
+ document.getElementById('rv').innerHTML=window.__o.map((q,k)=>{const a=window.__a[k];const ok=a===q.key;if(wo&&ok)return '';
+ return `<div class="card rv">${q.img?`<img class="fig" style="max-height:200px" src="${IMG[q.img]}">`:''}<b>${k+1}. ${q.stem}</b>
+ ${q.opts.map((o,j)=>`<div class="ro ${j===q.key?'ok':''} ${j===a&&!ok?'no':''}">${L[j]}) ${o}${j===a?' (your answer)':''}</div>`).join('')}
+ <div class="ex">${ok?'Correct':(a===undefined?'Not answered':'Wrong')}. Answer: ${L[q.key]}) ${q.opts[q.key]}<br>${q.exp||''}<div class="src">Book: ${q.src}</div></div></div>`}).join('')}
+if(location.hash==='#menu')home();else if(location.hash==='#exam')start(Q,'exam');else if(location.hash==='#review')guide();else start(Q,'practice');
+</script></body></html>
